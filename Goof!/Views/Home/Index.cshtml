@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Goof!</h1>
+    <p class="lead">Goof! es la aplicacion ideal para tus Mascotas.</p>
+    @using (Html.BeginForm())
+    {
+        <p>
+            @Html.TextBox("Busqueda") <br />
+            <input type="submit" value="Buscar" class="navbar-form"/>
+        </p>
+    }
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Agrega Mascotas</h2>
+        <p>
+            Agrega a tus Mascotas y sube fotos nuevas.
+        </p>
+       
+        <p><a class="btn btn-default" href="Mascotas/Create">Agregar &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Comenta tus Estados</h2>
+        <p>Cuentanos tus eventos mas importantes del dia. Comenta las publicaciones de tus amigos.</p>
+        <p><a class="btn btn-success" href="https://go.microsoft.com/fwlink/?LinkId=301866">Comentar &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Busca pareja para tus Mascotas</h2>
+        <p>Busca la paerja perfecta para tus mascotas segun los requisitos que quieras.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Buscar pareja &raquo;</a></p>
+    </div>
+</div>

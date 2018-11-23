@@ -1,0 +1,94 @@
+﻿@model Goof_.Models.MascotaViewModel
+
+@{
+                /**/
+
+                ViewBag.Title = "Agrega una nueva Mascota!";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <h4>Mascotas:</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Nombre:</p>
+            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Genero:</p>
+            @Html.EditorFor(model => model.Genero, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Genero, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Raza:</p>
+            @Html.EditorFor(model => model.Raza, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Raza, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Edad:</p>
+            @Html.EditorFor(model => model.Edad, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Edad, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Color de Pelo:</p>
+            @Html.EditorFor(model => model.ColorPelo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ColorPelo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Peso:</p>
+            @Html.EditorFor(model => model.Peso, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Peso, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Tiene Vacunas?</p>
+            @Html.EditorFor(model => model.Vacunas, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Vacunas, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Tiene Papeles?</p>
+            @Html.EditorFor(model => model.Papeles, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Papeles, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.ActionLink("Volver a Inicio", "Index")
+        </div>
+    </div>
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+        }

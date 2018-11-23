@@ -1,0 +1,98 @@
+﻿@model Goof_.Models.Mascotas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mascotas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Raza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorPelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorPelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vacunas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vacunas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Papeles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Papeles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LikeCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LikeCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.NombreUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.NombreUsu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdMascota }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
